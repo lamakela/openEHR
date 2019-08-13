@@ -41,18 +41,18 @@ description
 			copyright = <"© openEHR Foundation">
 			use = <"Brukes til å registrere aktiviteter knyttet til gjennomføringen av bildediagnostikk.">
 		>
-		["sl"] = <
-			language = <[ISO_639-1::sl]>
-			purpose = <"*To record activity regarding the performance of imaging examinations.(en)">
-			keywords = <"*Radiology(en)","*Ultrasound(en)","*MRI(en)","*CT(en)","*scan(en)","*tomography(en)">
-			use = <"*Use to record activity regarding the performance of imaging examinations.(en)">
-		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record activity regarding the performance of imaging examinations.">
 			keywords = <"Radiology","Ultrasound","MRI","CT","scan","tomography">
 			copyright = <"© openEHR Foundation">
 			use = <"Use to record activity regarding the performance of imaging examinations.">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"*To record activity regarding the performance of imaging examinations.(en)">
+			keywords = <"*Radiology(en)","*Ultrasound(en)","*MRI(en)","*CT(en)","*scan(en)","*tomography(en)">
+			use = <"*Use to record activity regarding the performance of imaging examinations.(en)">
 		>
 	>
 	other_details = <
@@ -65,7 +65,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8D159526FE6D10303B7D342E18E845FF">
+		["MD5-CAM-1.0.1"] = <"0c44d62b948b3c486fd9ddb6e83a4ecb">
 		["build_uid"] = <"8aea11bf-f4d7-4b50-9bdb-56026e32b273">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -281,6 +281,11 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
+					ELEMENT[at0023] occurrences matches {0..1} matches {    -- Text
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
 				}
 			}
 		}
@@ -385,6 +390,10 @@ ontology
 					text = <"Anatomical location">
 					description = <"Structured information about the specific anatomical location of the examination.">
 				>
+				["at0023"] = <
+					text = <"Text">
+					description = <"*">
+				>
 			>
 		>
 		["nb"] = <
@@ -473,6 +482,10 @@ ontology
 					text = <"Anatomisk lokalisering">
 					description = <"Strukturert informasjon om den spesifikke anatomiske lokaliseringen undersøkelsen har blitt utført på.">
 				>
+				["at0023"] = <
+					text = <"*DV_TEXT (en)">
+					description = <"*">
+				>
 			>
 		>
 		["sl"] = <
@@ -560,6 +573,10 @@ ontology
 				["at0022"] = <
 					text = <"Anatomska lokacija">
 					description = <"*Structured information about the specific anatomical location of the examination.(en)">
+				>
+				["at0023"] = <
+					text = <"*DV_TEXT (en)">
+					description = <"*">
 				>
 			>
 		>
